@@ -1,0 +1,46 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+
+  <title>Holmes</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+
+  <script>
+// Er balancen bare simuleret?
+var balance =10500;
+var cameraOn = true;
+// balancen bliver sat med som parameter
+function steal(balance, amount){
+cameraOn = false;
+if(amount < balance){
+ balance = balance - amount;
+}
+return amount;
+// Return slutter funktionen, så kamaraeret bliver ikke tændt
+cameraOn= true;
+}
+var amount = steal(balance, 1250);
+if(cameraOn == false){
+    window.alert("Du er kriminel og du har lige stjålet " +amount +" og det må manikke!!!!")
+
+}
+else{
+    window.alert("Kamera slukket")
+}
+
+
+    </script>
+
+</head>
+
+<body>
+
+
+</body>
+</html>
